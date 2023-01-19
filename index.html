@@ -8,40 +8,46 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div id="bar"></div>
-        <div id="titleBar">
+    <header>
+        <div id="bar" class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div id="menuOpen">
+            <div class="menuCard">
+                <ul>
+                    <li class="closedTag">&#10006;</li>
+                </ul>
+            </div>
+            <div class="menuCard">
+                <h3><a href="#">All Programs</a></h3>
+                <ul class="textProgram">
+                    <li class="main-program"><a href="#">After School Classes</a></li>
+                    <li class="main-program"><a href="#">All Day Science</a></li>
+                    <li class="main-program"><a href="#">Science Studio</a></li>
+                </ul>
+            </div>
+            <div class="menuCard">
+                <h3><a href="#">Schedule</a></h3>
+                <h3><a href="#">About Us</a></h3>
+                <h3><a href="#">Parties &amp; Events<</a></h3>
+                <h3><a href="#">For Teenagers</a></h3>
+            </div>
+            <div class="menuCard">
+                <a class="header-link" href="#">Location</a>
+                <a class="header-link" href="mailto:hello@scienceclinic.id">hello@scienceclinic.id</a>
+                <a class="header-link" href="tel:+62888222111">+62 888 222 111</a>
+            </div>
+        </div>
+        <div id="logo">
             <h3>ScienceClinic</h3>
         </div>
         <div id="btnBar">
             <a class="btn-color" href="#">Enroll</a>
         </div>
-    </nav>
-    <div id="menuOpen">
-        <div class="menuCard">
-            <a href="#">Close</a>
-        </div>
-        <div class="menuCard">
-            <h3>All Programs</h3>
-            <ul>
-                <li>After School Classes</li>
-                <li>All Day Science</li>
-                <li>Science Studio</li>
-            </ul>
-        </div>
-        <div class="menuCard">
-            <h3>Schedule</h3>
-            <h3>About Us</h3>
-            <h3>Parties &amp; Events</h3>
-            <h3>For Teenagers</h3>
-        </div>
-        <div class="menuCard">
-            <a href="#">Location</a>
-            <a href="mailto:hello@scienceclinic.id">hello@scienceclinic.id</a>
-            <a href="tel:+62888222111">+62 888 222 111</a>
-        </div>
-    </div>
-    <main>
+    </header>
+    <!-- <main>
         <div id="topSheet">
             <h1>Science Classes and Fun for Kids</h1>
             <a class="btn-color" href="#">Enroll Now</a>
@@ -105,7 +111,7 @@
                 <li><a href="#">Terserah</a></li>
             </ul>
         </div>
-    </footer>
+    </footer> -->
 
 <script src="index.js"></script>
 </body>
