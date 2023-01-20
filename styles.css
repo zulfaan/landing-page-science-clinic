@@ -1,81 +1,150 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 a{
     text-decoration: none;
-    color: #EEEEEE;
 }
+/* build header bar */
 header{
-    background-color: #FBD46D;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 3%  3% 2% 3%;
+    padding: 3% 5% 1% 5%;
+    background-color: #FBD46D;
 }
-#bar{
-    width: fit-content;
-}
-#logo{
-    color: #222831;
-    text-align: center;
-    font-size: 2rem;
-}
-#btnBar{
-    text-align: right;
-}
-.btn-color{
+header .hamburger .line{
+    width: 3rem;
+    height: 0.3rem;
     background-color: #222831;
-    padding: 0.1rem 3rem;
-    text-align: center;
-    font-size: 2rem;
+    margin: 10% 0;
 }
-#bar, .closedTag{
+header .hamburger, #home, header .sideMenu .cardSidebar ul.closed{
     display: block;
     cursor: pointer;
 }
-.closedTag{
-    width: fit-content;
+header #enroll a{
+    border: solid #222831 0.3rem;
+    color: #222831;
+    padding: 0 4rem;
 }
-.line{
-    width: 3rem;
-    height: 0.3rem;
-    padding: 0.2rem 3rem;
-    background-color: #222831;
-    margin-bottom: 0.3rem;
-}
-/* build menu side bar */
-#menuOpen{
+header #enroll a:hover{
     background-color: #222831;
     color: #EEEEEE;
-    width: 20rem;
+    transition: all 0.3s ease;
+}
+
+/* build side menu bar */
+header .sideMenu{
+    display: block;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: -100%;
-    height: 100%;
-    padding: 3% 3% 0 3%;
-    transition: 0.6s;
-}
-#menuOpen.active{
-    left: 0;
-    transition: 0.9s;
-}
-.menuCard{
-    padding: 8% 0;
     line-height: 1.5;
+    background-color: #222831;
+    height: 100%;
+    transition: all 0.6s ease;
+    font-size: 1.2rem;
 }
-.textProgram{
-    padding-left: 5%;
+header .sideMenu .cardSidebar{
+    margin: 3rem 0;
+    padding-left: 15%;
+}
+header .sideMenu .cardSidebar ul.closed{
+    width: fit-content;
+    font-size: 2rem;
+    font-size: 700;
+}
+header .sideMenu .cardSidebar.all-program{
+    margin-top: 2rem;
+}
+header .sideMenu .cardSidebar ul li{
     list-style: none;
+    color: #EEEEEE;
 }
-.main-program{
-    list-style: none;
-    list-style-type: '↳';
-    line-height: 1.8;
-    padding-left: 5%;
+header .sideMenu .cardSidebar a{
+    color: #EEEEEE;
+    position: relative;
 }
-.header-link{
-    display: block;
+header .sideMenu .cardSidebar .programs ul{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
 }
+header .sideMenu .cardSidebar .programs ul li, ul.contacts li{
+    padding-right: 1rem;
+}
+header .sideMenu .cardSidebar ul.contacts{
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-start;
+}
+/* build responsive side menu bar */
+header .sideMenu .cardSidebar a:before{
+    content: "";
+    position: absolute;
+    background-color: #EEEEEE;
+    height: 0.2rem;
+    width: 0;
+    bottom: 10px;
+    left: 0;
+    transition: all 0.4s ease;
+}
+header .sideMenu .cardSidebar a:hover::before{
+    width: 100%;
+}
+header .sideMenu.active{
+    left: 0;
+    transition: all 0.6s ease;
+}
+
+/* build main body page */
+main #topSheet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+    text-align: center;
+    width: 100%;
+    padding: 0 15%;
+}
+main #topSheet h1{
+    font-size: 5rem;
+    line-height: 1.2;
+    margin-bottom: 2%;
+}
+main #topSheet a{
+    margin: 3% 0;
+    position: relative;
+    width: fit-content;
+}
+main #topSheet a.btn-color{
+    padding: 0 4rem;
+    background-color: #222831;
+    color: #EEEEEE;
+    font-size: 2rem;
+}
+main #topSheet a.btn-colorless{
+    color: #222831;
+    font-size: 1.5rem;
+}
+main #topSheet a.btn-colorless:before{
+    content: "";
+    position: absolute;
+    background-color: #222831;
+    height: 0.1rem;
+    width: 100%;
+    bottom: 0.8rem;
+}
+
