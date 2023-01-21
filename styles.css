@@ -107,7 +107,6 @@ main #topSheet h1{
     width: 80%;
 }
 main #topSheet a{
-    position: relative;
     width: fit-content;
 }
 main #topSheet a.btn-color{
@@ -155,10 +154,7 @@ main #middleSheet .middleCarousel h2{
 }
 main #middleSheet .middleCarousel a.btn-colorless{
     border: solid #222831 0.2rem;
-    font-size: 1.5rem;
     color: #222831;
-    padding: 0 1.5rem;
-    margin-top: 5rem
 }
 main #middleSheet .middleCarousel a.btn-colorless:hover{
     background-color: #222831;
@@ -175,6 +171,40 @@ main #middleSheet .middleCarousel .mdCard{
 main #middleSheet .middleCarousel .mdCard p{
     line-height: 1.3;
     font-weight: 600;
+}
+main #middleSheet .middleCarousel .mdCard.middle-programs{
+    display: flex;
+    justify-content: center;
+}
+main #middleSheet .middleCarousel .mdCard .miniCard{   
+    padding: 0 1rem;
+}
+/* build footer */
+footer{
+    background-color: #222831;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    color: #EEEEEE;
+    line-height: 1.2;
+}
+footer .carouselFooter{
+    padding: 0 5%;
+}
+footer ul li{
+    list-style: none;
+}
+footer .btm-footer ul .text-footer{
+    font-weight: 700;
+}
+footer a{
+    color: #EEEEEE;
+}
+footer .btm-footer ul{
+    padding: 1rem 0;
+}
+footer .right-footer .top-footer a{
+    font-size: 1rem;
 }
 @media only screen and (min-width: 450px){
 /* build header bar */
@@ -213,6 +243,7 @@ main #middleSheet .middleCarousel .mdCard p{
     }
     main #topSheet a{
         margin: 3% 0;
+        position: relative;
     }
     main #topSheet a.btn-color{
         padding: 0 4rem;
@@ -228,6 +259,11 @@ main #middleSheet .middleCarousel .mdCard p{
     main #middleSheet .middleCarousel h2{
         font-size: 4.5rem;
     }
+    main #middleSheet .middleCarousel a.btn-colorless{
+        font-size: 1.5rem;
+        margin-top: 5rem;
+        padding: 0 1.5rem;
+    }
     main #middleSheet .middleCarousel h3.text-mc{
         width: 50%;
     }
@@ -236,14 +272,11 @@ main #middleSheet .middleCarousel .mdCard p{
         font-size: 1.5rem;
     }
     main #middleSheet .middleCarousel .mdCard.middle-programs{
-        display: flex;
         flex-direction: row;
-        justify-content: center;
         align-items: flex-start;
     }
     main #middleSheet .middleCarousel .mdCard .miniCard{
         margin: 8rem 5rem 0 5rem;
-        padding: 0 1rem;
     }
     main #middleSheet .middleCarousel .mdCard .miniCard h3{
         line-height: 1.2;
@@ -258,22 +291,10 @@ main #middleSheet .middleCarousel .mdCard p{
 
     /* build footer */
     footer{
-        background-color: #222831;
-        display: flex;
-        width: 100%;
         height: 100vh;
-        color: #EEEEEE;
-        line-height: 1.2;
-    }
-    footer .carouselFooter{
-        padding: 0 5%;
     }
     footer a{
-        color: #EEEEEE;
         position: relative;
-    }
-    footer ul li{
-        list-style: none;
     }
     footer .left-footer{
         width: 70%;
@@ -296,15 +317,6 @@ main #middleSheet .middleCarousel .mdCard p{
     footer .left-footer .btm-footer h3{
         font-size: 7rem;
         letter-spacing: -0.2rem;
-    }
-    footer .right-footer .top-footer a{
-        font-size: 1rem;
-    }
-    footer .btm-footer ul{
-        padding: 1rem 0;
-    }
-    footer .btm-footer ul .text-footer{
-        font-weight: 700;
     }
     /* build footer hover*/
     footer a:before{
@@ -351,7 +363,7 @@ main #middleSheet .middleCarousel .mdCard p{
     /*build side menu bar*/
     header .sideMenu{
         height: 100%;
-        width: 70%;
+        width: 60%;
     }
     header .sideMenu .cardSidebar{
         margin: 10% 0;
@@ -384,15 +396,57 @@ main #middleSheet .middleCarousel .mdCard p{
     }
     main #middleSheet .middleCarousel h3.text-mc{
         width: 100%;
+        padding-bottom: 3rem;
     }
     main #middleSheet .middleCarousel h2{
+        padding-top: 5rem;
         font-size: 3.5rem;
+        text-align: center;
+        line-height: 1;
     }
     main #middleSheet .middleCarousel .mdCard p{
         width: 90%;
         font-size: 1.3rem;
+        padding-bottom: 4rem;
     }
+    main #middleSheet .middleCarousel .mdCard.middle-programs{
+        flex-direction: column;
+        align-items: center;
+    }
+    main #middleSheet .middleCarousel .mdCard .miniCard{
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main #middleSheet .middleCarousel .mdCard .miniCard h3{
+        line-height: 1.5;
+        width: 80%;
+        padding-bottom: 1.5rem;
+    }
+    main #middleSheet .middleCarousel a.btn-colorless{
+        font-size: 1rem;
+        margin-top: 0.1rem;
+        padding: 0 1rem;
+    }
+    main #middleSheet .middleCarousel .mdCard .miniCard a.btn-colorless{
+        font-size: 1.2rem;
+    }
+    main #middleSheet .middleCarousel.bottom-mc a.btn-colorless{
+        margin-top: 1rem;
+    }
+    /* build footer */
     footer{
+        flex-direction: column;
+        height: 100%;
+    }
+    footer .carouselFooter .top-footer h3{
         display: none;
+    }
+    footer .carouselFooter .btm-footer h3{
+        margin-top: 10rem;
+        font-size: 3rem;
+        letter-spacing: -0.3rem;
     }
 }
