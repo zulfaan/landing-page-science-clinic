@@ -116,14 +116,6 @@ main #topSheet a.btn-color{
 main #topSheet a.btn-colorless{
     color: #222831;
 }
-main #topSheet a.btn-colorless:before{
-    content: "";
-    position: absolute;
-    background-color: #222831;
-    height: 0.1rem;
-    width: 100%;
-    bottom: 0.8rem;
-}
 /* build main middle body page */
 main #middleSheet{
     display: flex;
@@ -251,6 +243,14 @@ footer .right-footer .top-footer a{
     }
     main #topSheet a.btn-colorless{
         font-size: 1.5rem;
+    }
+    main #topSheet a.btn-colorless:before{
+        content: "";
+        position: absolute;
+        background-color: #222831;
+        height: 0.1rem;
+        width: 100%;
+        bottom: 0.8rem;
     }
     /* build main middle body page */
     main #middleSheet .middleCarousel h3{
@@ -389,7 +389,6 @@ footer .right-footer .top-footer a{
     }
     main #topSheet a.btn-colorless{
         font-size: 1rem;
-        position: relative;
     }
     /* build main middle body page */
     main #middleSheet .middleCarousel h3{
