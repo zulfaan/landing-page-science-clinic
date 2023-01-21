@@ -1,8 +1,3 @@
-let logo = document.querySelector("#home")
-logo.style.fontSize = "2rem"
-
-let enroll = document.querySelector("#enroll")
-enroll.style.fontSize = "2rem"
 
 //build side menu
 let sideBar = document.querySelector(".sideMenu");
