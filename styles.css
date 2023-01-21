@@ -32,9 +32,9 @@ header .hamburger, #home, header .sideMenu .cardSidebar ul.closed{
     cursor: pointer;
 }
 header #enroll a{
-    border: solid #222831 0.3rem;
+    border: solid #222831 0.2rem;
     color: #222831;
-    padding: 0 4rem;
+    padding: 0 0.5rem;
 }
 header #enroll a:hover{
     background-color: #222831;
@@ -108,7 +108,11 @@ header .sideMenu.active{
     transition: all 0.6s ease;
 }
 
-/* build main body page */
+/* build main top body page */
+main{
+    padding: 0 5%;
+    background-color: #EEEEEE;
+}
 main #topSheet{
     display: flex;
     flex-direction: column;
@@ -148,3 +152,144 @@ main #topSheet a.btn-colorless:before{
     bottom: 0.8rem;
 }
 
+/* build main middle body page */
+main #middleSheet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main #middleSheet .middleCarousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+}
+main #middleSheet .middleCarousel h3{
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+main #middleSheet .middleCarousel h2{
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+main #middleSheet .middleCarousel img{
+    width: 5rem;
+}
+main #middleSheet .middleCarousel h3.text-mc{
+    margin-top: 2rem;
+    width: 50%;
+    text-align: center;
+}
+main #middleSheet .middleCarousel a.btn-colorless{
+    border: solid #222831 0.2rem;
+    font-size: 1.5rem;
+    color: #222831;
+    padding: 0 1.5rem;
+    margin-top: 5rem
+}
+main #middleSheet .middleCarousel a.btn-colorless:hover{
+    background-color: #222831;
+    color: #EEEEEE;
+    transition: all 0.3s ease;   
+}
+main #middleSheet .middleCarousel .mdCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main #middleSheet .middleCarousel .mdCard p{
+    width: 38%;
+    line-height: 1.3;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+main #middleSheet .middleCarousel .mdCard.middle-programs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+main #middleSheet .middleCarousel .mdCard .miniCard{
+    margin: 8rem 5rem 0 5rem;
+    padding: 0 1rem;
+}
+main #middleSheet .middleCarousel .mdCard .miniCard h3{
+    line-height: 1.2;
+    padding-bottom: 1.5rem;
+}
+main #middleSheet .middleCarousel .mdCard .miniCard a.btn-colorless{
+    font-size: 1.2rem;
+}
+main #middleSheet .middleCarousel.bottom-mc a.btn-colorless{
+    margin-top: 1rem;
+}
+
+/* build footer */
+footer{
+    background-color: #222831;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    color: #EEEEEE;
+    line-height: 1.2;
+}
+footer .carouselFooter{
+    padding: 0 5%;
+}
+footer a{
+    color: #EEEEEE;
+    position: relative;
+}
+footer ul li{
+    list-style: none;
+}
+footer .left-footer{
+    width: 70%;
+}
+footer .right-footer{
+    width: 30%;
+}
+footer .top-footer{
+    height: 30%;
+    margin-top: 5rem;
+}
+footer .btm-footer{
+    align-items: flex-end;
+    width: fit-content;
+    margin-top: 10rem;
+}
+footer .left-footer .top-footer h3{
+    font-size: 2rem;
+}
+footer .left-footer .btm-footer h3{
+    font-size: 7rem;
+    letter-spacing: -0.2rem;
+}
+footer .right-footer .top-footer a{
+    font-size: 1rem;
+}
+footer .btm-footer ul{
+    padding: 1rem 0;
+}
+footer .btm-footer ul .text-footer{
+    font-weight: 700;
+}
+/* build footer hover*/
+footer a:before{
+    content: "";
+    position: absolute;
+    background-color: #EEEEEE;
+    height: 0.1rem;
+    width: 0;
+    bottom: 10px;
+    left: 0;
+    transition: all 0.4s ease;
+}
+footer a:hover::before{
+    width: 100%;
+}
