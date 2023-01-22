@@ -8,6 +8,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #EEEEEE;
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4{
+    font-family: 'Roboto', sans-serif;
 }
 a{
     text-decoration: none;
@@ -21,10 +26,34 @@ header .hamburger .line{
     width: 3rem;
     height: 0.3rem;
     background-color: #222831;
-    margin: 10% 0;
 }
 header #home h3, header #enroll{
     font-size: 2rem;
+    
+}
+/*build header bar sticky*/
+header{
+    transition: 0.6s;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+}
+header.sticky{
+    background-color: #222831;
+}
+header.sticky #home h3, header.sticky #enroll a{
+    color: #EEEEEE;
+}
+header.sticky .hamburger .line{
+    background-color: #EEEEEE;
+}
+header.sticky #enroll a{
+    border: solid #EEEEEE 0.2rem;
+}
+header.sticky #enroll a:hover{
+    background-color: #EEEEEE;
+    color: #222831;
+    transition: all 0.3s ease;
 }
 /* build side menu bar */
 header .sideMenu{
@@ -74,9 +103,9 @@ header .sideMenu .cardSidebar a:before{
     content: "";
     position: absolute;
     background-color: #EEEEEE;
-    height: 0.2rem;
+    height: 0.15rem;
     width: 0;
-    bottom: 10px;
+    bottom: -0.1rem;
     left: 0;
     transition: all 0.4s ease;
 }
@@ -90,7 +119,6 @@ header .sideMenu.active{
 /* build main top body page */
 main{
     padding: 0 5%;
-    background-color: #EEEEEE;
 }
 main #topSheet{
     display: flex;
@@ -145,7 +173,6 @@ main #middleSheet .middleCarousel h2{
     line-height: 1.5;
 }
 main #middleSheet .middleCarousel a.btn-colorless{
-    border: solid #222831 0.2rem;
     color: #222831;
 }
 main #middleSheet .middleCarousel a.btn-colorless:hover{
@@ -205,8 +232,13 @@ footer .right-footer .top-footer a{
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 3% 5% 1% 5%;
-        background-color: #FBD46D;
+        padding: 1% 5%;
+        /* position: fixed;
+        top: 0;
+        z-index: 100000; */
+    }
+    header.sticky{
+        padding: 2% 5%;
     }
     header .hamburger .line{
         margin: 10% 0;
@@ -214,7 +246,8 @@ footer .right-footer .top-footer a{
     header #enroll a{
         border: solid #222831 0.2rem;
         color: #222831;
-        padding: 0 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
     }
     header #enroll a:hover{
         background-color: #222831;
@@ -238,7 +271,7 @@ footer .right-footer .top-footer a{
         position: relative;
     }
     main #topSheet a.btn-color{
-        padding: 0 4rem;
+        padding: 0.5rem 4rem;
         font-size: 2rem;
     }
     main #topSheet a.btn-colorless{
@@ -250,7 +283,7 @@ footer .right-footer .top-footer a{
         background-color: #222831;
         height: 0.1rem;
         width: 100%;
-        bottom: 0.8rem;
+        bottom: -0.3rem;
     }
     /* build main middle body page */
     main #middleSheet .middleCarousel h3{
@@ -262,7 +295,8 @@ footer .right-footer .top-footer a{
     main #middleSheet .middleCarousel a.btn-colorless{
         font-size: 1.5rem;
         margin-top: 5rem;
-        padding: 0 1.5rem;
+        padding: 0.5rem 1.5rem;
+        border: solid #222831 0.2rem;
     }
     main #middleSheet .middleCarousel h3.text-mc{
         width: 50%;
@@ -280,7 +314,7 @@ footer .right-footer .top-footer a{
     }
     main #middleSheet .middleCarousel .mdCard .miniCard h3{
         line-height: 1.2;
-        padding-bottom: 1.5rem;
+        padding-bottom: 3.5rem;
     }
     main #middleSheet .middleCarousel .mdCard .miniCard a.btn-colorless{
         font-size: 1.2rem;
@@ -325,7 +359,7 @@ footer .right-footer .top-footer a{
         background-color: #EEEEEE;
         height: 0.1rem;
         width: 0;
-        bottom: 10px;
+        bottom: -0.1rem;
         left: 0;
         transition: all 0.4s ease;
     }
@@ -342,8 +376,10 @@ footer .right-footer .top-footer a{
         justify-content: space-around;
         align-items: center;
         padding: 0 5%;
-        background-color: #FBD46D;
         width: 100%;
+    }
+    header.sticky{
+        padding: 1% 5%;
     }
     header .hamburger{
         display: flex;
@@ -395,7 +431,7 @@ footer .right-footer .top-footer a{
         font-size: 1.5rem;
     }
     main #middleSheet .middleCarousel h3.text-mc{
-        width: 100%;
+        width: 80%;
         padding-bottom: 3rem;
     }
     main #middleSheet .middleCarousel h2{
@@ -405,8 +441,9 @@ footer .right-footer .top-footer a{
         line-height: 1;
     }
     main #middleSheet .middleCarousel .mdCard p{
-        width: 90%;
+        width: 80%;
         font-size: 1.3rem;
+        padding-top: 2rem;
         padding-bottom: 4rem;
     }
     main #middleSheet .middleCarousel .mdCard.middle-programs{
@@ -428,7 +465,8 @@ footer .right-footer .top-footer a{
     main #middleSheet .middleCarousel a.btn-colorless{
         font-size: 1rem;
         margin-top: 0.1rem;
-        padding: 0 1rem;
+        padding: 0.5rem 1.5rem;
+        border: solid #222831 0.1rem;
     }
     main #middleSheet .middleCarousel .mdCard .miniCard a.btn-colorless{
         font-size: 1.2rem;
@@ -447,6 +485,6 @@ footer .right-footer .top-footer a{
     footer .carouselFooter .btm-footer h3{
         margin-top: 10rem;
         font-size: 3rem;
-        letter-spacing: -0.3rem;
+        letter-spacing: 0.2rem;
     }
 }

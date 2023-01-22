@@ -10,3 +10,8 @@ openMenu.onclick = function(){
 closedMenu.onclick = function(){
     sideBar.classList.remove('active');
 };
+
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0)
+})
