@@ -39,7 +39,7 @@ header{
     z-index: 100000;
 }
 header.sticky{
-    background-color: #222831;
+    background-color: #B69F51;
 }
 header.sticky #home h3, header.sticky #enroll a{
     color: #EEEEEE;
@@ -117,9 +117,6 @@ header .sideMenu.active{
     transition: all 0.6s ease;
 }
 /* build main top body page */
-main{
-    padding: 0 5%;
-}
 main #topSheet{
     display: flex;
     flex-direction: column;
@@ -140,6 +137,17 @@ main #topSheet a{
 main #topSheet a.btn-color{
     background-color: #222831;
     color: #EEEEEE;
+}
+main #topSheet a.btn-color:hover{
+    animation: bounce 1s linear;
+}
+@keyframes bounce{
+    20%,50%,80%,to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-20px);
+    }
 }
 main #topSheet a.btn-colorless{
     color: #222831;
@@ -176,8 +184,9 @@ main #middleSheet .middleCarousel a.btn-colorless{
     color: #222831;
 }
 main #middleSheet .middleCarousel a.btn-colorless:hover{
-    background-color: #222831;
+    background-color: #B69F51;
     color: #EEEEEE;
+    border-color: #B69F51;
     transition: all 0.3s ease;   
 }
 main #middleSheet .middleCarousel .mdCard{
@@ -233,9 +242,6 @@ footer .right-footer .top-footer a{
         align-items: center;
         width: 100%;
         padding: 1% 5%;
-        /* position: fixed;
-        top: 0;
-        z-index: 100000; */
     }
     header.sticky{
         padding: 2% 5%;
@@ -265,6 +271,7 @@ footer .right-footer .top-footer a{
     }
     main #topSheet h1{
         font-size: 5rem;
+        width: 50%;
     }
     main #topSheet a{
         margin: 3% 0;
@@ -310,7 +317,7 @@ footer .right-footer .top-footer a{
         align-items: flex-start;
     }
     main #middleSheet .middleCarousel .mdCard .miniCard{
-        margin: 8rem 5rem 0 5rem;
+        margin: 8% 5% 0 5%;
     }
     main #middleSheet .middleCarousel .mdCard .miniCard h3{
         line-height: 1.2;
@@ -367,19 +374,64 @@ footer .right-footer .top-footer a{
         width: 100%;
     }
 }
+/*build mobile tab*/
+@media only screen and (max-width: 950px){
+    header #enroll a{
+        padding: 0.4rem 0.8rem;
+    }
+    main #topSheet h1{
+        font-size: 3rem;
+        padding: 5% 0;
+    }
+    main #topSheet a.btn-color{
+        padding: 0.4rem 2.5rem;
+    }
+    main #middleSheet .middleCarousel h3.text-mc{
+        width: 80%;
+    }
+    main #middleSheet .middleCarousel .mdCard p{
+        padding-top: 5%;
+        width: 50%;
+    }
+    main #middleSheet .middleCarousel .mdCard .miniCard{
+        margin: 8% 2% 0 2%;
+    }
+    footer .btm-footer{
+        margin-top: 10%;
+    }
+    footer .left-footer .btm-footer h3{
+        font-size: 5rem;
+        letter-spacing: -0.1rem;
+        margin-top: 10%;
+    }
+    footer .left-footer .btm-footer{
+        position: relative;
+        top: 0;
+    }
+    footer .right-footer .btm-footer{
+        position: relative;
+        top: 0;
+    }
+    footer{
+        height: 100vh;
+    }
+    footer .carouselFooter{
+        padding: 0 2%;
+    }
+}
 /*build mobile website*/
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 750px){
     /*build header menu*/
     header{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        padding: 0 5%;
+        padding: 0 6%;
         width: 100%;
     }
     header.sticky{
-        padding: 1% 5%;
+        padding: 1% 6%;
     }
     header .hamburger{
         display: flex;
@@ -409,8 +461,11 @@ footer .right-footer .top-footer a{
         margin-top: 5rem;
     }
     /*build main top body page*/
+    main{
+        padding: 0 5%;
+    }
     main #topSheet{
-        padding: 50% 15%;
+        padding: 20% 15%;
     }
     main #topSheet h1{
         font-size: 3rem;
@@ -431,8 +486,9 @@ footer .right-footer .top-footer a{
         font-size: 1.5rem;
     }
     main #middleSheet .middleCarousel h3.text-mc{
-        width: 80%;
+        width: 100%;
         padding-bottom: 3rem;
+        font-size: 2rem;
     }
     main #middleSheet .middleCarousel h2{
         padding-top: 5rem;
